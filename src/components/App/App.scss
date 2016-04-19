@@ -13,5 +13,5 @@
 }
 
 .content {
-  @mixin absolute-position , , , 180px;
+  @mixin absolute-position 0, 0, 0, 180px;
 }

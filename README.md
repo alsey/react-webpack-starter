@@ -1,3 +1,1 @@
-# react-webpack-starter
-
-Frontend project template, using React and webpack-dev-server.
+# 东软政务云基础平台|管理控制台

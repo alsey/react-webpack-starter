@@ -1,7 +1,7 @@
-# react-webpack-starter
+# 东软政务云基础平台|管理控制台
 
 All notable changes to this project will be documented in this file.
 
-### [v0.0.1] - 2016-04-15
+### [v1.0.0-alpha] - 2016-04-15
 
 - First version released.
