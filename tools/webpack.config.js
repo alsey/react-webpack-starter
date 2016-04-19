@@ -60,7 +60,8 @@ const config = {
     }, {
       test: /\.scss$/,
       loaders: [
-        'isomorphic-style-loader',
+        // 'isomorphic-style-loader',
+        'style-loader',
         `css-loader?${DEBUG ? 'sourceMap&' : 'minimize&'}modules&localIdentName=` +
         `${DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]'}`,
         'postcss-loader?parser=postcss-scss'
@@ -97,7 +98,8 @@ const config = {
 };
 
 const clientConfig = extend(true, {}, config, {
-  entry: './src/client.js',
+  // entry: './src/client.js',
+  entry: './src/main.js',
   output: {
     path: path.join(__dirname, '../build/public'),
     // filename: DEBUG ? '[name].js?[hash]' : '[name].[hash].js',
@@ -105,7 +107,8 @@ const clientConfig = extend(true, {}, config, {
   },
   // Choose a developer tool to enhance debugging
   // http://webpack.github.io/docs/configuration.html#devtool
-  devtool: DEBUG ? 'cheap-module-eval-source-map' : false,
+  // devtool: DEBUG ? 'cheap-module-eval-source-map' : false,
+  devtool: DEBUG ? 'source-map' : false,
   plugins: [
     ...config.plugins,
     new webpack.DefinePlugin({...GLOBALS, 'process.env.BROWSER': true

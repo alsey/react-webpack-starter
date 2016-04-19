@@ -14,7 +14,6 @@ async function copy({
 
 	if (watch) {
 		const watcher = await new Promise((resolve, reject) => {
-			console.log('aaa');
 			gaze('src/public/**/*.*', (err, val) => err ? reject(err) : resolve(val));
 		});
 		watcher.on('changed', async(file) => {

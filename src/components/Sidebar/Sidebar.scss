@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.root {
+  @mixin absolute-position 0, auto;
+  width: 180px;
+  color: $text-primary-reverse;
+  background-color: $bar-primary;
+}

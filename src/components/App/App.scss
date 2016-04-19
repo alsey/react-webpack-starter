@@ -1,1 +1,17 @@
-@charset "UTF-8";
+@charset 'UTF-8';
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.root {
+  background-color: $white-base;
+  @mixin absolute-position;
+}
+
+.container {
+  @mixin absolute-position 50px;
+}
+
+.content {
+  @mixin absolute-position , , , 180px;
+}

@@ -1,13 +1,17 @@
 import React from 'react'
+import s from './App.scss'
+import Topbar from '../Topbar'
+import Sidebar from '../Sidebar'
 
-// class App extends React.Component {
-
-// 	render() {
-// 		return <div>Hello World!</div>
-// 	}
-
-// }
-
-const App = () => <div>Hello World!</div>
+const App = () => (
+	<div className={s.root}>
+		<Topbar />
+		<div className={s.container}>
+			<Sidebar />
+			<div className={s.content}>
+			</div>
+		</div>
+	</div>
+)
 
 export default App

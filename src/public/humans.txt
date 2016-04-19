@@ -1,9 +1,6 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
-
 # TEAM
     Builder: Xiaoyu.DAI
-    Contact: zamber [at] gmail.com
+    Contact: daixy [at] neusoft.com
     From: Shenyang, China
 
 # THANKS
@@ -12,5 +9,5 @@
 	Last update: 2016/4/15
 	Language: Chinese
 	Doctype: HTML5
-	Tech stack: HTML5, LESS, React
+	Tech stack: HTML5, SASS, React
 	IDE: Sublime Text, Chrome
