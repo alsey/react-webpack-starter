@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.item {
+  display: block;
+  height: $item-height;
+  padding-left: $item-gap;
+  line-height: $item-height;
+  color: $text-secondary-reverse;
+  text-decoration: none;
+  background-color: $content-primary;
+  border-bottom: 1px solid $$border;
+  border-left: 3px solid $content-primary;
+  @mixin unselectable;
+}
+
+.item > i {
+  width: $icon-width;
+}
+
+.item > span {
+  padding-left: $item-gap;
+}
+
+.hover {
+  color: $text-primary;
+}
+
+.active {
+  color: $highlight;
+  background-color: $white-base;
+  border-left-color: $highlight;
+}

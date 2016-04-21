@@ -4,14 +4,96 @@
 @import '../../styles/mixin.scss';
 
 .root {
-  background-color: $white-base;
   @mixin absolute-position;
 }
 
 .container {
+  display: flex;
+  align-items: stretch;
   @mixin absolute-position 50px;
 }
 
 .content {
-  @mixin absolute-position 0, 0, 0, 180px;
+  background-color: $white-base;
+  flex: auto;
+}
+
+.sidebar {
+  color: $text-primary-reverse;
+  background-color: $bar-primary;
+
+  flex: none;
+}
+
+.shrinker {
+  height: $item-height;
+  padding-left: $item-gap;
+  line-height: $item-height;
+  cursor: pointer;
+  background-color: $bar-secondary;
+  border-bottom: 1px solid $bar-primary;
+  border-left: 3px solid $bar-secondary;
+}
+
+.shrink {
+  width: $bar-shrink-width;
+  transition: $animation-swift-out;
+}
+
+.expand {
+  width: $bar-expand-width;
+  transition: $animation-swift-out;
+}
+
+
+.title {
+  height: $item-height;
+  padding-left: $item-gap;
+  font-size: 1.25em;
+  line-height: $item-height;
+  color: $text-secondary-reverse;
+  cursor: pointer;
+  background-color: $bar-secondary;
+  border-bottom: 1px solid $bar-primary;
+  border-left: 3px solid $bar-secondary;
+  @mixin unselectable;
+}
+
+.title > i {
+  width: $icon-width;
+}
+
+.title > span {
+  padding-left: $item-gap;
+}
+
+.item {
+  display: block;
+  height: $item-height;
+  padding-left: $item-gap;
+  line-height: $item-height;
+  color: $text-secondary-reverse;
+  text-decoration: none;
+  background-color: $bar-primary;
+  border-bottom: 1px solid $bar-primary;
+  border-left: 3px solid $bar-primary;
+  @mixin unselectable;
+}
+
+.item > i {
+  width: $icon-width;
+}
+
+.item > span {
+  padding-left: $item-gap;
+}
+
+.hover {
+  color: $text-primary-reverse;
+}
+
+.active {
+  color: $text-primary-reverse;
+  background-color: $highlight;
+  border-left-color: $highlight;
 }

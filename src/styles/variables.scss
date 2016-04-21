@@ -2,18 +2,18 @@
  * Colors
  * ========================================================================== */
 
-$white-base:            #FFFFFF;
-$highlight:				#189ACB;
-$success:				#27C701;
-$text-primary:			#000000;
-$text-secondary:		#686868;
-$text-primary-reverse:	#FFFFFF;
-$text-secondary-reverse:#ACB9C2;
-$bar-primary:			#21282E;
-$bar-secondary:			#394555;
-$content-primary:		#F5F5F5;
-$cotent-secondary:		#E9E9E9;
-$border:				#D5D5D5;
+$white-base:            #FFFFFF; /* white */
+$highlight:				#189ACB; /* blue  */
+$success:				#27C701; /* green */
+$text-primary:			#000000; /* black */
+$text-secondary:		#686868; /* gray  */
+$text-primary-reverse:	#FFFFFF; /* white */
+$text-secondary-reverse:#ACB9C2; /* gray  */ 
+$bar-primary:			#21282E; /* deep blue */
+$bar-secondary:			#394555; /* gray blue */
+$content-primary:		#F5F5F5; /* lighter gray */
+$cotent-secondary:		#E9E9E9; /* light gray */
+$border:				#D5D5D5; /* gray */
 
 /*
  * Typography
@@ -26,6 +26,11 @@ $font-family-base:      'Segoe UI', 'Lucida Grande', Helvetica, Arial, 'Microsof
  * ========================================================================== */
 
 $min-content-width:     1280px;
+$item-height: 			39px; /* border-bottom 1px */
+$item-gap: 				10px;
+$icon-width:			13px;
+$bar-expand-width:		180px;
+$bar-shrink-width:		36px;
 
 /*
  * Media queries breakpoints

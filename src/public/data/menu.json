@@ -1,0 +1,39 @@
+{
+	"data" : [ 
+		{	"id" : 1,
+			"title" : "基础技术服务",
+		 	"items" : [
+				{
+					"id" : 11,
+					"icon" : "android",
+					"name" : "容器管理",
+					"href" : "cont-mgnt"
+				},
+				{
+					"id" : 12,
+					"icon" : "android",
+					"name" : "队列消息",
+					"href" : "que-msg"					
+				}
+			]
+		},
+		{
+			"id" : 2,
+			"title" : "公共业务服务",
+			"items" : [
+				{
+					"id" : 21,
+					"icon" : "android",
+					"name" : "认证与授权",
+					"href" : "auth"
+				},
+				{
+					"id" : 22,
+					"icon" : "android",
+					"name" : "用户信息中心",
+					"href" : "user"
+				}
+			]
+		}
+	]
+}
