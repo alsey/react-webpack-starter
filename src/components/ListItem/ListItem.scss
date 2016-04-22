@@ -33,3 +33,8 @@
   background-color: $white-base;
   border-left-color: $highlight;
 }
+
+.disable {
+  cursor: default;
+  color: $text-secondary-reverse;
+}

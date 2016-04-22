@@ -4,24 +4,16 @@
 @import '../../styles/mixin.scss';
 
 .root {
-  @mixin absolute-position;
-}
-
-.container {
-  display: flex;
-  align-items: stretch;
-  @mixin absolute-position 50px;
+  @mixin flex-box;
 }
 
 .content {
   background-color: $white-base;
   @mixin flex-box;
 }
-
 .sidebar {
-  color: $text-primary-reverse;
-  background-color: $bar-primary;
-
+  color: $text-secondary;
+  background-color: $content-primary;
   flex: none;
 }
 
@@ -30,9 +22,9 @@
   padding-left: $item-gap;
   line-height: $item-height;
   cursor: pointer;
-  background-color: $bar-secondary;
-  border-bottom: 1px solid $bar-primary;
-  border-left: 3px solid $bar-secondary;
+  background-color: $content-primary;
+  border-bottom: 1px solid $border;
+  border-left: 5px solid $content-primary;
 }
 
 .shrink {
@@ -49,12 +41,12 @@
   height: $item-height;
   padding-left: $item-gap;
   font-size: 1.25em;
+  font-weight: 600;
   line-height: $item-height;
-  color: $text-secondary-reverse;
-  cursor: pointer;
-  background-color: $bar-secondary;
-  border-bottom: 1px solid $bar-primary;
-  border-left: 3px solid $bar-secondary;
+  color: $text-primary;
+  background-color: $content-primary;
+  border-bottom: 1px solid $border;
+  border-left: 5px solid $content-primary;
   @mixin unselectable;
 }
 
@@ -71,11 +63,12 @@
   height: $item-height;
   padding-left: $item-gap;
   line-height: $item-height;
-  color: $text-secondary-reverse;
+  color: $text-secondary;
+  font-size: 1.25em;
   text-decoration: none;
-  background-color: $bar-primary;
-  border-bottom: 1px solid $bar-primary;
-  border-left: 3px solid $bar-primary;
+  background-color: $content-primary;
+  border-bottom: 1px solid $border;
+  border-left: 5px solid $content-primary;
   @mixin unselectable;
 }
 
@@ -88,17 +81,17 @@
 }
 
 .hover {
-  color: $text-primary-reverse;
+  color: $text-primary;
 }
 
 .active {
   cursor: default;
-  color: $text-primary-reverse;
-  background-color: $highlight;
+  color: $highlight;
+  background-color: $white-base;
   border-left-color: $highlight;
 }
 
 .disable {
   cursor: default;
-  color: color($text-secondary-reverse l(-30%));
+  color: color($text-secondary l(70%));
 }

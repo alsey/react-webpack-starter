@@ -58,7 +58,9 @@ export default class App extends React.Component {
 													  href={data.href}
 													  className={s.item}
 													  hoverClassName={s.hover}
-													  activeClassName={s.active} />
+													  activeClassName={s.active}
+													  disableClassName={s.disable}
+													  disable={data.disable ? true : false} />
 										)
 									})}
 								</Dropdown>

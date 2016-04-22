@@ -1,37 +1,27 @@
-import React, {
-	Component,
-	PropTypes
-} from 'react'
+import React from 'react'
+import s from './ContMgnt.scss'
+import Sidebar from '../../components/Sidebar'
+import ListItem from '../../components/ListItem'
+import ListGroup from '../../components/ListGroup'
 
-const menu = {
-	title: '容器管理',
-	items: [{
-		id: 1,
-		name: '概览',
-		href: 'cont-mgnt/overview'
-	}, {
-		id: 2,
-		name: 'API说明',
-		href: 'cont-mgnt/api'
-	}, {
-		id: 3,
-		name: '服务状态',
-		href: 'cont-mgnt/status'
-	}, {
-		id: 4,
-		name: '服务管理',
-		href: 'cont-mgnt/mgnt'
-	}, {
-		id: 5,
-		name: '服务日志',
-		href: 'cont-mgnt/logs'
-	}]
-}
-
-function ContMgnt() {
+function ContMgnt(props) {
 	return (
-		<div>
-			<h1>TODO:容器管理</h1>
+		<div className={s.root}>
+			<Sidebar className={s.sidebar}
+					 shrinkerClassName={s.shrinker}
+					 expandClassName={s.expand}
+					 shrinkClassName={s.shrink}>
+				<ListGroup title='容器管理' titleClassName={s.title}>
+					<ListItem name='概览' href='cont-mgnt/overview' actived={true} className={s.item} hoverClassName={s.hover} activeClassName={s.active} disableClassName={s.disable} />
+					<ListItem name='API说明' href='cont-mgnt/api' className={s.item} hoverClassName={s.hover} activeClassName={s.active} disableClassName={s.disable} />
+					<ListItem name='服务状态' href='cont-mgnt/status' className={s.item} hoverClassName={s.hover} activeClassName={s.active} disableClassName={s.disable} />
+					<ListItem name='服务管理' href='cont-mgnt/mgnt' className={s.item} hoverClassName={s.hover} activeClassName={s.active} disableClassName={s.disable} />
+					<ListItem name='服务日志' href='cont-mgnt/logs' className={s.item} hoverClassName={s.hover} activeClassName={s.active} disableClassName={s.disable} />
+				</ListGroup>
+			</Sidebar>
+			<div className={s.content}>
+				{props.children}
+			</div>
 		</div>
 	)
 }

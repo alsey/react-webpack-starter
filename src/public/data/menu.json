@@ -13,7 +13,8 @@
 					"id" : 12,
 					"icon" : "android",
 					"name" : "队列消息",
-					"href" : "que-msg"					
+					"href" : "que-msg",
+					"disable" : true			
 				}
 			]
 		},
@@ -31,7 +32,8 @@
 					"id" : 22,
 					"icon" : "android",
 					"name" : "用户信息中心",
-					"href" : "user"
+					"href" : "user",
+					"disable" : true
 				}
 			]
 		}

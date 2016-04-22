@@ -8,19 +8,14 @@ const Shrink = ComposedComponent => class extends React.Component {
 	}
 
 	@autobind
-	handleClick(e) {
+	handleShrink(e) {
 		this.setState({
 			shrink: !this.state.shrink
 		})
 	}
 
-	@autobind
-	isShrink() {
-		return this.state.shrink
-	}
-
 	render() {
-		return <ComposedComponent {...this.props} handleShrink={this.handleClick} isShrink={this.isShrink} />;
+		return <ComposedComponent {...this.props} handleShrink={this.handleShrink} isShrink={this.state.shrink} />;
 	}
 }
 

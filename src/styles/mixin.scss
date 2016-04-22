@@ -10,7 +10,6 @@
 	left: $left;
 	right: $right;
 	bottom: $bottom;
-	overflow-x: hidden;
 }
 
 @define-mixin unselectable {
@@ -20,4 +19,10 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+@define-mixin flex-box {
+  flex: auto;
+  display: flex;
+  align-items: stretch;
 }

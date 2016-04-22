@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, hashHistory /*browserHistory*/ } from 'react-router'
+import { Router, hashHistory /* browserHistory */ } from 'react-router'
 import { render } from 'react-dom'
 import App from './components/App'
 import Dashboard from './pages/Dashboard'
@@ -17,6 +17,6 @@ const routes = {
 }
 
 render(
-  <Router history={ hashHistory /*browserHistory*/ } routes={ routes } />,
+  <Router history={ hashHistory /* browserHistory */ } routes={ routes } />,
   document.getElementById('root')
 )

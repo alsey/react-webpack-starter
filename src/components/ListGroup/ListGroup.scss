@@ -3,32 +3,23 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixin.scss';
 
-.bar {
-  color: $text-primary-reverse;
-  background-color: $bar-primary;
-  flex: none;
-}
-
-.expand {
-  width: $bar-expand-width;
-  transition: $animation-swift-out;
-}
-
-.shrink {
-  width: $bar-shrink-width;
-  transition: $animation-swift-out;
-}
-
-.panel {
-  width: $bar-expand-width;
-}
-
-.shrinker {
+.title {
   height: $item-height;
   padding-left: $item-gap;
+  font-size: 1.25em;
   line-height: $item-height;
+  color: $text-secondary-reverse;
   cursor: pointer;
   background-color: $bar-secondary;
   border-bottom: 1px solid $bar-primary;
   border-left: 3px solid $bar-secondary;
+  @mixin unselectable;
+}
+
+.title > i {
+  width: $icon-width;
+}
+
+.title > span {
+  padding-left: $item-gap;
 }

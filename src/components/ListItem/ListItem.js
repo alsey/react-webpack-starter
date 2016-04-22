@@ -1,10 +1,10 @@
 import React, {	Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import classnames from 'classnames'
-import HoverAndActive from '../../decorators/HoverAndActive'
+import Hover from '../../decorators/Hover'
 import s from './ListItem.scss'
 
-@HoverAndActive
+@Hover
 export default class ListItem extends Component {
 
 	static propTypes = {
@@ -14,7 +14,9 @@ export default class ListItem extends Component {
 		className: PropTypes.string,
 		hoverClassName: PropTypes.string,
 		activeClassName: PropTypes.string,
-		actived: PropTypes.bool
+		disableClassName: PropTypes.string,
+		actived: PropTypes.bool,
+		disable: PropTypes.bool
 	}
 
 	static defaultProps = {
@@ -23,25 +25,23 @@ export default class ListItem extends Component {
 		className: s.item,
 		hoverClassName: s.hover,
 		activeClassName: s.active,
-		actived: false
-	}
-
-	conponentWillMount() {
-		if (this.props.actived) {
-			this.props.toActive()
-		}		
+		disableClassName: s.disable,
+		actived: false,
+		disable: false
 	}
 
 	render() {
 
 		return (
 			<Link className={classnames(this.props.className, 
-									  {[this.props.hoverClassName]: this.props.isHover(), 
-									   [this.props.activeClassName]: this.props.isActive()})} 
+									  {[this.props.hoverClassName]: !this.props.disable && this.props.isHover,
+									   [this.props.disableClassName]: this.props.disable})} 
 			   	  to={this.props.href}
-			   	  onClick={this.props.handleClick}
-			   	  onMouseOver={this.props.handleMouseOver}
-				  onMouseOut={this.props.handleMouseOut}>
+			   	  onClick={(e) => {if (this.props.disable) e.preventDefault()}}
+			   	  onMouseOver={this.props.disable ? () => undefined : this.props.handleMouseOver}
+				  onMouseOut={this.props.disable ? () => undefined : this.props.handleMouseOut}
+				  onlyActiveOnIndex={this.props.disable ? false : this.props.actived}
+				  activeClassName={this.props.disable ? '' : this.props.activeClassName}>
 				<i className={classnames('fa', 'fa-lg', {[`fa-${this.props.icon}`]: this.props.icon})} aria-hidden="true"></i>
 				<span>{this.props.name}</span>
 			</Link>

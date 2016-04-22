@@ -9,9 +9,11 @@
  html {
   color: $text-primary;
   background-color: $white-base;
+  x-background-color: red;
   font-style: normal;
   font-weight: 100;
   font-size: 0.75em; /* ~12px; */
   font-family: $font-family-base;
   min-width: $min-content-width;
+  overflow: hidden;
 }
